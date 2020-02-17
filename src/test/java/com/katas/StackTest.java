@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class StackTest {
-  private final Stack stack = new Stack();
+  private final Stack<Integer> stack = new Stack<>();
 
   @Test
   public void empty() throws Throwable {

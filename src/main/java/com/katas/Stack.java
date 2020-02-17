@@ -2,15 +2,15 @@ package com.katas;
 
 import java.util.EmptyStackException;
 
-public class Stack {
+public class Stack<E> {
   private int size;
-  private int[] items = new int[3];
+  private E[] items = (E[])new Object[3];
 
-  public void push(int value) {
+  public void push(E value) {
     items[size++] = value;
   }
 
-  public int pop() {
+  public E pop() {
     if(size == 0) {
       throw new EmptyStackException();
     }
