@@ -1,5 +1,7 @@
 package com.katas;
 
+import java.util.EmptyStackException;
+
 public class Stack {
   private int size;
   private int[] items = new int[3];
@@ -9,6 +11,9 @@ public class Stack {
   }
 
   public int pop() {
+    if(size == 0) {
+      throw new EmptyStackException();
+    }
     return items[--size];
   }
   

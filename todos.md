@@ -4,4 +4,4 @@
 - ~~empty stack?~~
 - generic type
 - throws Excpeiton if stack overflow capacity
-- throws Excpeiton when pop an empty stack
+- ~~throws Excpeiton when pop an empty stack~~

@@ -1,7 +1,8 @@
 package com.katas;
 
 import org.junit.Test;
-import static org.junit.Assert.assertThat;
+import java.util.EmptyStackException;
+import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class StackTest {
@@ -31,5 +32,15 @@ public class StackTest {
 
     assertThat(stack.pop(), equalTo(3));
     assertThat(stack.size(), equalTo(0));
+  }
+
+  @Test
+  public void throwsEmptyStackExceptionWhenPopItemFromAnEmptyStack() throws Throwable {
+    try {
+      stack.pop();
+      fail();
+    } catch(EmptyStackException expected) {
+      assertThat(stack.size(), equalTo(0));
+    }
   }
 }
