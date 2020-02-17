@@ -11,4 +11,15 @@ public class StackTest {
 
     assertThat(stack.size(), equalTo(0));
   }
+
+  @Test
+  public void push() throws Throwable {
+    Stack stack = new Stack();
+
+    stack.push(3);
+    assertThat(stack.size(), equalTo(1));
+
+    stack.push(4);
+    assertThat(stack.size(), equalTo(2));
+  }
 }

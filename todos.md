@@ -1,4 +1,5 @@
-- push items in stack
+- ~~push items in stack~~
 - pop items in stack
 - ~~empty stack?~~
 - generic type
+- throws Excpeiton if stack overflow capacity
