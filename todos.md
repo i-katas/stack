@@ -1,0 +1,2 @@
+- push items in stack
+- pop items in stack
