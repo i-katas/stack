@@ -4,9 +4,16 @@ import java.util.EmptyStackException;
 
 public class Stack<E> {
   private int size;
-  private E[] items = (E[])new Object[3];
+  private final E[] items;
+
+  public Stack(int capacity) {
+    this.items = (E[])new Object[capacity];
+  }
 
   public void push(E value) {
+    if(size >= items.length) {
+      throw new IllegalStateException("Stack capacity is full: " + items.length);
+    }
     items[size++] = value;
   }
 

@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class StackTest {
-  private final Stack<Integer> stack = new Stack<>();
+  private final Stack<Integer> stack = new Stack<>(2);
 
   @Test
   public void empty() throws Throwable {
@@ -41,6 +41,20 @@ public class StackTest {
       fail();
     } catch(EmptyStackException expected) {
       assertThat(stack.size(), equalTo(0));
+    }
+  }
+
+  @Test
+  public void throwsExceptionWhenPushItemInAFullStack() throws Throwable {
+    stack.push(1);
+    stack.push(2);
+
+    try {
+      stack.push(3);
+      fail();
+    } catch(IllegalStateException expected) {
+      assertThat(expected.getMessage(), equalTo("Stack capacity is full: 2"));
+      assertThat(stack.size(), equalTo(2));
     }
   }
 }
