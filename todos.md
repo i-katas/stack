@@ -1,6 +1,6 @@
 - ~~push items in stack~~
 - ~~pop items in stack~~
-- create stack in fixtures?
+- ~~create stack in fixtures?~~
 - ~~empty stack?~~
 - generic type
 - throws Excpeiton if stack overflow capacity
